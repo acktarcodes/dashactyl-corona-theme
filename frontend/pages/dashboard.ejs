@@ -404,9 +404,9 @@
                             <input type="submit" id="one" style="display: none" value="Renew (<%= renewcoststring %>)">
                         </form>
                         
-                        <button type="button" onclick="document.getElementById('three').click()" class="btn btn-danger btn-icon-text"><i class="mdi mdi-upload btn-icon-prepend"></i> Delete </button> | 
-                        <button type="button" onclick="document.getElementById('one').click()" class="btn btn-success btn-icon-text"><i class="mdi mdi-alert btn-icon-prepend"></i> Renew </button> <% if (server_timers[server.attributes.id].action !== "deletion") { %>| 
-                        <button type="button" onclick="document.getElementById('two').click()" class="btn btn-success btn-icon-text"><i class="mdi mdi-alert btn-icon-prepend"></i> <%= server_timers[server.attributes.id].action == "auto" ? "Disable" : "Enable" %> Automatic Renewal </button><% } %>
+                        <button type="button" onclick="document.getElementById('three').click()" class="btn btn-danger"> Delete </button> | 
+                        <button type="button" onclick="document.getElementById('one').click()" class="btn btn-success"> Renew </button> <% if (server_timers[server.attributes.id].action !== "deletion") { %>| 
+                        <button type="button" onclick="document.getElementById('two').click()" class="btn btn-success"> <%= server_timers[server.attributes.id].action == "auto" ? "Disable" : "Enable" %> Automatic Renewal </button><% } %>
 
                           <% if (server_timers[server.attributes.id].action !== "deletion") { %>
                             <form action="/servers/auto_renew/<%= server.attributes.id %>" method="POST">
@@ -415,7 +415,7 @@
                             </form>
                           <% } %>
                         <% } else { %>
-                          <button type="button" onclick="document.getElementById('three').click()" class="btn btn-danger btn-icon-text"><i class="mdi mdi-upload btn-icon-prepend"></i> Delete </button>
+                          <button type="button" onclick="document.getElementById('three').click()" class="btn btn-danger"> Delete </button>
                         <% } %>
 
                         <% if (Object.entries(settings.eggs).filter(egg=> server.attributes.egg == egg[1].info.egg).length == 1) { %>
