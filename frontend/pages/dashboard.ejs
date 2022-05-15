@@ -84,6 +84,19 @@
               <span class="menu-title">Buy Extra Resources</span>
             </a>
           </li>
+          <% if (data.panelinfo.root_admin) { %>
+           <li class="nav-item nav-category">
+            <span class="nav-link">Administrator</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="/admin">
+              <span class="menu-icon">
+                <i class="mdi mdi-cast-connected"></i>
+              </span>
+              <span class="menu-title">Admin Panel</span>
+            </a>
+          </li>
+          <% } %>
         </ul>
       </nav>
         <!-- Modal Content -->
