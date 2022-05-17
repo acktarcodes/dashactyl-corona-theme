@@ -356,7 +356,7 @@
                   <hr>
                   <p><b><center>Free nodes require you to pay <%= settings.renewal.renew_fee %> coins to create a server, and require you to renew the server every 2 weeks.</center></b></p>
                    <hr>
-                  <form action="/servers/create" method="POST" class="forms-sample">
+                  <form action="/servers/create" method="POST" class="create_server">
                     <div class="form-group">
                       <label for="name">Server Name</label>
                       <input type="text" class="form-control" name="name" placeholder="NObody loves me:( wanna be friends? - Acktar">
@@ -389,7 +389,7 @@
                           <% } %>
                       </select>
                     </div>
-                    <button type="submit" class="btn btn-primary me-2">Continue</button>
+                    <button type="submit" class="btn btn-primary me-2" onclick="this.disabled = true">Continue</button>
                     <button class="btn btn-dark">Cancel</button>
                   </form>
                 </div>
